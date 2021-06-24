@@ -18,3 +18,10 @@ WHEN I view the search results
 THEN I am presented with the Movie Title, Date Released, List of Actors and an icon representation.
 WHEN I click on a search in the search history
 THEN I am again presented with movie options that include selected criteria.
+
+APIs used 
+OMDb (Open movie DataBase)- 'http://www.omdbapi.com/?i=tt3896198&apikey=8e4cfd66'
+
+Giphy - https://api.giphy.com/v1/gifs/search?api_key=tBkIHZ6GFiU67GbmkzNnGvHO0aiWvJJg
+
+

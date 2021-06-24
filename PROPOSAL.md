@@ -14,7 +14,7 @@ SO THAT I can watch the movie
 GIVEN a movie selector 
 WHEN I search for an Actor/Actress, Genre, Release Date
 THEN I am presented with selections for the parameters and is added to the search history
-WHEN I view current weather conditions for that city
+WHEN I view the search results
 THEN I am presented with the Movie Title, Date Released, List of Actors and an icon representation.
 WHEN I click on a search in the search history
 THEN I am again presented with movie options that include selected criteria.

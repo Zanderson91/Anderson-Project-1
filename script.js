@@ -28,6 +28,18 @@ console.log(ratings)
   //need return ratings...
 
 
+  function getGenre(genre){
+
+  document.getElementById("search-btn").addEventListener("click",function(){
+    const genre =[]
+  $('input.genre[type=checkbox]').each(function(){
+    if ($(this).is(":checked")){
+      genre.push($(this).val())
+  }
+  })
+console.log(genre)
+  })
+
 
 
   //Create separate function for Genre and Release Year

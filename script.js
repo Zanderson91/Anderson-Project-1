@@ -1,3 +1,7 @@
+let search = $("#search");
+let searchBtn = $("#search-btn");
+let mGenre = $("#genre");
+
 let url =
   "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&source_ids=203,57&genres=1";
 fetch(url, { method: "Get" })
@@ -14,10 +18,10 @@ fetch(url2, { method: "Get" })
     console.log(json);
   });
 
+    $(mGenre).html(id.name);
+    console.log(mGenre);
 
-
-
-
+  /*
 fetch("http://www.omdbapi.com/?i=tt3896198&apikey=8e4cfd66", {})
   .then(function (response) {
     return response.json();
@@ -87,4 +91,4 @@ document.getElementById("search-btn").addEventListener("click", function () {
 
 //Create separate function for Genre and Release Year
 //getRatings, getGenre, getRelease, getActor
-
+*/

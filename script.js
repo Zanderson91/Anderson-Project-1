@@ -23,7 +23,7 @@ document.getElementById("search-btn-1").addEventListener("click", function () {
   $.get(url).done(function (movies) {
     console.log(movies);
     for (let i = 0; i < 4; i++) {
-      let randomNumber = Math.floor(Math.random() * movies.titles);
+      let randomNumber = Math.floor(Math.random() * movies.titles.length);
       $("#descr-" + i).text(movies.titles[randomNumber].plot_overview);
       $("#card-type-" + i).text(movies.titles[randomNumber].tmdb_type);
       $("#card-year-" + i).text(movies.titles[randomNumber].year);

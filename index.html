@@ -36,67 +36,56 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col s4">Genre
+            <div class="col m6">Genre
                 <form action="#">
                     <p>
                         <label>
-                            <input type="checkbox" class="genre" value="1" />
+                            <input name="Action" type="checkbox" class="genre" value="1" />
                             <span>Action</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="genre" value="4" />
+                            <input name="Comedy" type="checkbox" class="genre" value="4" />
                             <span>Comedy</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="genre" value="7" />
+                            <input name="Drama" type="checkbox" class="genre" value="7" />
                             <span>Drama</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="genre" value="9" />
+                            <input name="Fantasy" type="checkbox" class="genre" value="9" />
                             <span>Fantasy</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="genre" value="11" />
+                            <input name="Horror/Thriller" type="checkbox" class="genre" value="11" />
                             <span>Horror/Thriller</span>
                         </label>
                     </p>
             </div>
 
-            <div class="col s4">Type
+            <div class="col s6">Type
                 <form action="#">
                     <p>
                         <label>
-                            <input type="checkbox" class="movie" value="Movie" />
+                            <input type="checkbox" class="type" value="movie" />
                             <span>Movie</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input type="checkbox" class="tvShow" value="TV Show" />
+                            <input type="checkbox" class="type" value="tv_series" />
                             <span>TV Show</span> </label> </p>
-
                 </form>
             </div>
-            <br>
-            <br>
-            <div class="input-field col s4">Search by Actor/Actress
-                <p>
-                    <input placeholder="Chris Pratt" id="first_name" type="text" class="validate">
-            </div>
-            </p>
         </div>
     </div>
-</div>
-</div>
-</div>
 </div>
 <div class="row"></div>
 <div class="row"></div>
@@ -104,6 +93,62 @@
     <button class="btn-large waves-effect waves-light green lighten-1" id="search-btn">Show Results!</button>
 </div>
 </div>
+</div>
+<div class="container hidden" id="response-container">
+    <div class="row">
+        <div class="col s12 m4 l3">
+            <div class="card">
+                <h5><span id="card-title-0"></span></h5>
+                <div class="card-image-0">
+                    <div class="card-content">
+                        <p><strong>Type:</strong> <span id="card-type-0"></span></p>
+                        <p><strong>Genre:</strong> <span id="genre-0"></span></p>
+                        <p><strong>Year:</strong> <span id="card-year-0"></span> </p>
+                        <p><span id="descr-0"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l3">
+            <div class="card">
+                <span id="card-title-1"></span>
+                <div class="card-image-1">
+                    <div class="card-content">
+                        <p><strong>Type:</strong> <span id="card-type-1"></span> </p>
+                        <p>Genre: <span id="genre-1"></span></p>
+                        <p>Year: <span id="card-year-1"></span> </p>
+                        <p><span id="descr-1"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l3">
+            <div class="card">
+                <span id="card-title-2"></span>
+                <div class="card-image-2">
+                    <div class="card-content">
+                        <p>Type: <span id="card-type-2"></span> </p>
+                        <p>Genre: <span id="genre-2"></span></p>
+                        <p>Year: <span id="card-year-2"></span> </p>
+                        <p><span id="descr-2"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l3">
+            <div class="card">
+                <span id="card-title-3"></span>
+                <div class="card-image-3">
+                    <div class="card-content">
+                        <p>Type: <span id="card-type-3"></span> </p>
+                        <p>Genre: <span id="genre-3"></span></p>
+                        <p>Year: <span id="card-year-3"></span> </p>
+                        <p><span id="descr-3"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="section">

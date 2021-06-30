@@ -45,15 +45,15 @@ $("#genre").text(genre[0].name);
     console.log(genre);
 })
 
-let url3 = 
-  "http://www.omdbapi.com/?i=tt3896198&apikey=8e4cfd66";
+let url3 =
+  "https://api.watchmode.com/v1/title/345534/details/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs";
   $.ajax({
     method: "GET",
     url: url3,
   }).then(function (descr) {
-    $("#descr").text(genre[0].name);
+    $("#descr").text(descr.plot_overview);
 
-    console.log(genre);
+    console.log(descr);
   });
 
 
@@ -72,7 +72,7 @@ chosenMovies.push(randomNumber)
 while(chosenMovies.includes(randomNumber)) {
 randomNumber = Math.floor …
 }
-*/
+
 
 
 fetch(

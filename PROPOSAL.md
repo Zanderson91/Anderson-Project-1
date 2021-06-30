@@ -5,6 +5,10 @@ With the "What to Watch" site, simply enter your parameters and BOOM crisis aver
 
 ## User Story
 
+ 
+
+
+
 ```
 AS A user
 I WANT to see a list of movies, TV Shows and Games

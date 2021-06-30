@@ -1,9 +1,13 @@
 let search = $("#search");
 let searchBtn = $("#search-btn");
 let mGenre = $("#genre");
+let cardTitle = $("#card-title");
+let cardImage = $("#card-image");
+let cardType = $("#card-type");
+let cardYear = $("#card-year");
+let cardDescr = $("#card-descr");
 
-let url =
-  "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&source_ids=203,57&genres=1";
+/*
 fetch(url, { method: "Get" })
   .then((res) => res.json())
   .then((json) => {
@@ -12,23 +16,64 @@ fetch(url, { method: "Get" })
 
 let url2 =
   "https://api.watchmode.com/v1/genres/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs";
-fetch(url2, { method: "Get" })
+/*fetch(url2, { method: "Get" })
   .then((res) => res.json())
   .then((json) => {
     console.log(json);
   });
+*/
+let url =
+  "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&source_ids=203,57&genres=1";
+  $.ajax({
+    method: "GET",
+    url: url,
+}).then(function (titles) {
+$("#card-type").text(titles.titles[0].tmdb_type);
+$("#card-year").text(titles.titles[0].year);
+$("#card-title").text(titles.titles[0].title);
+console.log(titles)
+})
 
-    $(mGenre).html(id.name);
-    console.log(mGenre);
+let url2 =
+  "https://api.watchmode.com/v1/genres/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs";
+  $.ajax({
+    method: "GET",
+    url: url2,
+}).then(function (genre) {
+$("#genre").text(genre[0].name);
 
-  /*
-fetch("http://www.omdbapi.com/?i=tt3896198&apikey=8e4cfd66", {})
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
+    console.log(genre);
+})
+
+let url3 = 
+  "http://www.omdbapi.com/?i=tt3896198&apikey=8e4cfd66";
+  $.ajax({
+    method: "GET",
+    url: url3,
+  }).then(function (descr) {
+    $("#descr").text(genre[0].name);
+
+    console.log(genre);
   });
+
+
+$.when($.ajax(url), $.ajax(url2), $.ajax(url3)).done(function (titles, genre, descr) {
+  console.log(titles, genre, descr);
+});
+
+  //Need randomizer...
+
+/*
+genre = array
+genre.length
+let randomNumber = Math.floor(Math.random() * genre.length)
+const chosenMovies = []
+chosenMovies.push(randomNumber)
+while(chosenMovies.includes(randomNumber)) {
+randomNumber = Math.floor …
+}
+*/
+
 
 fetch(
   "https://api.giphy.com/v1/gifs/search?api_key=tBkIHZ6GFiU67GbmkzNnGvHO0aiWvJJg&q=golf",

@@ -17,8 +17,11 @@ document.getElementById("search-btn-1").addEventListener("click", function () {
     genreValues.push(genres[i].value);
   }
   const url =
-    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" + genreValues + "&types=" + types;
-    console.log(url)
+    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" +
+    genreValues +
+    "&types=" +
+    types;
+  console.log(url);
 
   $.get(url).done(function (movies) {
     console.log(movies);
@@ -47,7 +50,7 @@ document.getElementById("search-btn-2").addEventListener("click", function () {
     "&types=" +
     types;
   console.log(url);
-//IDs for Cards and randomizer for
+  //IDs for Cards and randomizer for
   $.get(url).done(function (movies) {
     console.log(movies);
     for (let i = 0; i < 4; i++) {
@@ -84,4 +87,3 @@ function getTypes() {
   console.log(type);
   return type;
 }
-

@@ -23,7 +23,7 @@ document.getElementById("search-btn-1").addEventListener("click", function () {
   $.get(url).done(function (movies) {
     console.log(movies);
     for (let i = 0; i < 4; i++) {
-      let randomNumber = Math.floor(Math.random() * movies.titles.length);
+      let randomNumber = Math.floor(Math.random() * movies.titles);
       $("#descr-" + i).text(movies.titles[randomNumber].plot_overview);
       $("#card-type-" + i).text(movies.titles[randomNumber].tmdb_type);
       $("#card-year-" + i).text(movies.titles[randomNumber].year);
@@ -47,7 +47,7 @@ document.getElementById("search-btn-2").addEventListener("click", function () {
     "&types=" +
     types;
   console.log(url);
-//IDs for Cards and randomizer for results
+//IDs for Cards and randomizer for
   $.get(url).done(function (movies) {
     console.log(movies);
     for (let i = 0; i < 4; i++) {

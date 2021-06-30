@@ -7,8 +7,8 @@ let cardType = $("#card-type");
 let cardYear = $("#card-year");
 let cardDescr = $("#card-descr");
 
-
-document.getElementById("search-btn").addEventListener("click", function () {
+//Event Listener for Unique Suggestions
+document.getElementById("search-btn-1").addEventListener("click", function () {
   $("#response-container").show();
   const genres = getGenres();
   const types = getTypes();
@@ -17,10 +17,7 @@ document.getElementById("search-btn").addEventListener("click", function () {
     genreValues.push(genres[i].value);
   }
   const url =
-    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" +
-    genreValues +
-    "&types=" +
-    types;
+    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" + genreValues + "&types=" + types;
     console.log(url)
 
   $.get(url).done(function (movies) {
@@ -35,6 +32,33 @@ document.getElementById("search-btn").addEventListener("click", function () {
   });
 });
 
+//Event Listener for Show Results
+document.getElementById("search-btn-2").addEventListener("click", function () {
+  $("#response-container").show();
+  const genres = getGenres();
+  const types = getTypes();
+  genreValues = [];
+  for (let i = 0; i < genres.length; i++) {
+    genreValues.push(genres[i].value);
+  }
+  const url =
+    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" +
+    genreValues +
+    "&types=" +
+    types;
+  console.log(url);
+//IDs for Cards and randomizer for results
+  $.get(url).done(function (movies) {
+    console.log(movies);
+    for (let i = 0; i < 4; i++) {
+      let randomNumber = Math.floor(Math.random() * movies.titles.length);
+      $("#descr-" + i).text(movies.titles[randomNumber].plot_overview);
+      $("#card-type-" + i).text(movies.titles[randomNumber].tmdb_type);
+      $("#card-year-" + i).text(movies.titles[randomNumber].year);
+      $("#card-title-" + i).text(movies.titles[randomNumber].title);
+    }
+  });
+});
 function getGenres() {
   const genre = [];
   $("input.genre[type=checkbox]").each(function () {

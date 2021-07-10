@@ -53,7 +53,7 @@ document.getElementById("search-btn-2").addEventListener("click", function () {
   //IDs for Cards and randomizer for
   $.get(url).done(function (movies) {
     console.log(movies);
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 10; i++) {
       let randomNumber = Math.floor(Math.random() * movies.titles.length);
       $("#descr-" + i).text(movies.titles[randomNumber].plot_overview);
       $("#card-type-" + i).text(movies.titles[randomNumber].tmdb_type);

@@ -17,7 +17,8 @@ document.getElementById("search-btn-1").addEventListener("click", function () {
     genreValues.push(genres[i].value);
   }
   const url =
-    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" +
+    "https://api.watchmode.com/v1/list-titles/?apiKey=3qHCfoVrt0ShenBssBthHH16NVZi9SIkjx8k59Tj"
+"&genres=" +
     genreValues +
     "&types=" +
     types;
@@ -40,7 +41,7 @@ function getDetails(resultID) {
   const url0 =
     "https://api.watchmode.com/v1/title/" +
     resultID +
-    "/details/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs";
+    "/details/?apiKey=3qHCfoVrt0ShenBssBthHH16NVZi9SIkjx8k59Tj ";
   return fetch(url0, { method: "Get" })
     .then((res) => res.json())
     .then((json) => {
@@ -62,7 +63,8 @@ document.getElementById("search-btn-2").addEventListener("click", function () {
     genreValues.push(genres[i].value);
   }
   const url =
-    "https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" +
+"https://api.watchmode.com/v1/list-titles/?apiKey=3qHCfoVrt0ShenBssBthHH16NVZi9SIkjx8k59Tj" 
+"&genres=" +
     genreValues +
     "&types=" +
     types;

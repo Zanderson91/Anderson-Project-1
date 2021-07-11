@@ -7,10 +7,11 @@ With the "What to Watch" site, simply enter your parameters and BOOM crisis aver
 
 
 https://zanderson91.github.io/What-To-Watch/
+
 https://github.com/Zanderson91/What-To-Watch
 
 
-Coming soon.....Descriptions and Movie Posters!
+Coming soon.....Movie/TV Posters!
 
 
 
@@ -31,9 +32,9 @@ WHEN I click on a search in the search history
 THEN I am again presented with movie options that include selected criteria.
 
 APIs used 
-Watch Mode (List Titles) - https://api.watchmode.com/v1/list-titles/?apiKey=yhpNItDXAOmWWzncuiKhQUljt22PagqsZ3ryDlLs&genres=" +
+Watch Mode (List Titles) - https://api.watchmode.com/v1/list-titles/?apiKey=3qHCfoVrt0ShenBssBthHH16NVZi9SIkjx8k59Tj&genres=" +
 Watch Mode (Genres)
-Watch Mode (Title)
+Watch Mode (Title) - https://api.watchmode.com/v1/title/
 
 OMDb (Open movie DataBase)- 'http://www.omdbapi.com/?i=tt3896198&apikey=8e4cfd66'
 

@@ -1,3 +1,7 @@
 .hidden {
     display: none;
 }
+
+.card {
+    height: 400px;
+}

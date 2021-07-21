@@ -13,6 +13,8 @@ https://github.com/Zanderson91/What-To-Watch
 
 Coming soon.....Movie/TV Posters!
 
+![image](https://user-images.githubusercontent.com/81836426/126519408-cabdc19b-e4e9-4dcb-b561-6819ddb4c46c.png)
+
 
 
 ## User Story
